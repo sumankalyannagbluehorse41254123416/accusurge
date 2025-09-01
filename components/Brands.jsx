@@ -1,47 +1,127 @@
-// components/Brands.js
+"use client";
+import { useEffect, useRef } from 'react';
 
 export default function Brands() {
+  const brandItemsRef = useRef([]);
+
+  useEffect(() => {
+    // Set initial state for all items
+    brandItemsRef.current.forEach(item => {
+      if (item) {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(-50px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      }
+    });
+
+    // Track scroll direction and animation states
+    let lastScrollTop = 0;
+    let scrollDirection = 'down';
+    const animatedItems = new Set();
+
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+      if (!element) return false;
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+        rect.bottom >= 0
+      );
+    }
+
+    // Function to handle scroll animation
+    function handleScrollAnimation() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Determine scroll direction
+      scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+      lastScrollTop = scrollTop;
+
+      // Animate items based on scroll position and direction
+      brandItemsRef.current.forEach((item, index) => {
+        if (!item) return;
+        
+        // Only animate if not already animated
+        if (isInViewport(item) && !animatedItems.has(item)) {
+          // Mark as animated
+          animatedItems.add(item);
+
+          // Add delay based on index for staggered animation
+          const delay = index * 0.1;
+
+          setTimeout(() => {
+            if (scrollDirection === 'down') {
+              // Animate from top to bottom when scrolling down
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            } else {
+              // Animate from bottom to top when scrolling up
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }
+          }, delay * 1000);
+        } else if (scrollTop < 100) {
+          // Reset animation if scrolled to top
+          item.style.opacity = '0';
+          item.style.transform = scrollDirection === 'down' ?
+            'translateY(-50px)' : 'translateY(50px)';
+          // Remove from animated set when reset
+          animatedItems.delete(item);
+        }
+      });
+    }
+
+    // Initial check on component mount
+    setTimeout(handleScrollAnimation, 500);
+
+    // Listen for scroll events with throttling
+    let scrolling = false;
+    const scrollHandler = () => {
+      if (!scrolling) {
+        scrolling = true;
+        setTimeout(() => {
+          handleScrollAnimation();
+          scrolling = false;
+        }, 100);
+      }
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+    };
+  }, []);
+
   return (
-    <section className="bg-white py-10 md:px-20">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col">
-          {/* Heading */}
-          <div>
+    <div className="bg-white py-10 md:px-20 ">
+      <div className="container mx-auto">
+        <div className="flex flex-col ">
+          <div className="col-span-full">
             <div className="flex justify-between items-center border-b-4 border-double border-gray-200 pb-6">
               <h4 className="text-2xl font-bold text-gray-800">Shop by Brand</h4>
-              <a
-                href="#"
-                className="text-base text-blue-600 font-bold underline hover:text-blue-800 transition"
-              >
-                View All
-              </a>
+              <a href="#" className="text-base underline text-blue-600 font-bold no-underline">View All</a>
             </div>
           </div>
-
-          {/* Brand Logos */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-12">
-            {[
-              "brand-1.png",
-              "brand-2.png",
-              "brand-3.png",
-              "brand-4.png",
-              "brand-5.png",
-              "brand-6.png",
-              "brand-7.png",
-              "brand-8.png",
-              "brand-9.png",
-              "brand-10.png",
-            ].map((brand, index) => (
-              <img
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-12">
+            {[...Array(10)].map((_, index) => (
+              <a 
                 key={index}
-                src={`images/${brand}`}
-                alt={`Brand ${index + 1}`}
-                className="transition-transform duration-300 hover:-translate-y-2 rounded-lg shadow-md bg-white"
-              />
+                href="#" 
+                className="brand-img"
+                ref={el => brandItemsRef.current[index] = el}
+              >
+                <img 
+                  src={`images/brand-${index + 1}.png`} 
+                  className="transition-transform duration-300 hover:-translate-x-1 shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_3px_10px_0_rgba(0,0,0,0.08)]" 
+                  alt={`Brand ${index + 1}`}
+                />
+              </a>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
