@@ -256,7 +256,7 @@ html {
 
   .nav {
       width: 100%;
-      height: 65px;
+      height: 78px;
       position: fixed;
       line-height: 65px;
       text-align: center;
@@ -265,7 +265,7 @@ html {
 
   .nav div.logo {
       float: left;
-      max-width: 100px;
+      max-width: 115px;
       height: auto;
       /* padding-left: 3rem; */
   }
@@ -281,6 +281,7 @@ html {
   .nav div.main_list {
       height: 65px;
       float: right;
+      margin-top: 8px;
   }
 
   .nav div.main_list ul {
@@ -330,16 +331,16 @@ html {
   /* Media qurey section */
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-      .container {
+      /* .container {
           margin: 0;
-      }
+      } */
   }
 
   @media screen and (max-width:1199px) {
-      .nav .container {
+      /* .nav .container {
           max-width: 100%;
           padding: 0;
-      }
+      } */
 
       .navTrigger {
           display: block;

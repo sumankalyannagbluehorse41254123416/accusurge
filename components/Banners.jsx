@@ -62,8 +62,8 @@ export default function Banners() {
   }, []);
 
   return (
-    <div className="container md:px-20 py-20 mx-auto">
-      <div className="flex flex-wrap -mx-4">
+    <div className="container md:px-10 py-20 mx-auto">
+      <div className="flex flex-wrap mx-4">
         <div className="w-full lg:w-4/12 md:w-6/12 px-3 mb-8">
           <div className="text-center">
             <a href="#" className="no-underline">

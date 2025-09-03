@@ -60,7 +60,7 @@ export default function Products() {
 
   return (
     <section className="bg-[#eef5f6]">
-      <div className="md:px-20 py-10">
+      <div className="md:px-20 py-10 mx-4">
         <div className="container mx-auto">
           {/* Heading */}
           <div className="col-span-full">

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section ref={heroRef}>
       <div className="home background-hero bg-cover bg-center w-full pt-48 pb-40">
-        <div className="container mx-auto md:px-12">
+        <div className="container mx-auto px-10 md:px-12">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-7/12 md:w-full">
               <div className="ps-banner-content">

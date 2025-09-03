@@ -89,7 +89,7 @@ export default function Categories() {
   return (
     <div ref={sectionRef} className="category-section py-10 pb-11 md:px-20">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center mx-4">
           <div 
             className="left-category-content lg:w-5/12 w-full mb-8 lg:mb-0" 
             style={{ 

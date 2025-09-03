@@ -95,7 +95,7 @@ export default function Brands() {
   }, []);
 
   return (
-    <div className="bg-white py-10 md:px-20 ">
+    <div className="bg-white py-10 md:px-20 mx-4">
       <div className="container mx-auto">
         <div className="flex flex-col ">
           <div className="col-span-full">
