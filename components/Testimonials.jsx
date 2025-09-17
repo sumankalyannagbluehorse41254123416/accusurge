@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const TestimonialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [slidesPerView, setSlidesPerView] = useState(1);
   const intervalRef = useRef(null);
 
   const testimonials = [
@@ -37,14 +38,31 @@ const TestimonialSlider = () => {
     }
   ];
 
-  // Handle autoplay with seamless looping
+  // Create duplicated slides for infinite loop
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
+  // Handle responsive slides per view
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) setSlidesPerView(3);
+      else if (width >= 768) setSlidesPerView(2);
+      else setSlidesPerView(1);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Handle autoplay with seamless infinite looping
   useEffect(() => {
     if (isPlaying) {
       intervalRef.current = setInterval(() => {
         setCurrentSlide(prev => {
-          // If on the last slide, jump to the first slide instantly
-          if (prev >= testimonials.length - getSlidesPerView()) {
-            return 0;
+          // If we've reached the end of the duplicated slides, reset to beginning
+          if (prev >= testimonials.length) {
+            return 1; // Start from the first slide (not 0 to avoid jump)
           }
           return prev + 1;
         });
@@ -56,15 +74,27 @@ const TestimonialSlider = () => {
     return () => clearInterval(intervalRef.current);
   }, [isPlaying, testimonials.length]);
 
+  // Reset to beginning when we reach the end of the duplicated slides
+  useEffect(() => {
+    if (currentSlide === testimonials.length) {
+      // After the transition is complete, instantly jump to the first slide (0)
+      // without animation to create a seamless loop
+      const timer = setTimeout(() => {
+        setCurrentSlide(0);
+      }, 500); // This should match the transition duration
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentSlide, testimonials.length]);
+
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
 
   const goToNext = () => {
     setCurrentSlide((prev) => {
-      // If on the last slide, jump to the first slide
-      if (prev >= testimonials.length - getSlidesPerView()) {
-        return 0;
+      if (prev >= testimonials.length) {
+        return 1; // Start from the first slide (not 0 to avoid jump)
       }
       return prev + 1;
     });
@@ -72,9 +102,8 @@ const TestimonialSlider = () => {
 
   const goToPrev = () => {
     setCurrentSlide((prev) => {
-      // If on the first slide, jump to the last slide
       if (prev === 0) {
-        return testimonials.length - getSlidesPerView();
+        return testimonials.length - 1; // Jump to the last real slide
       }
       return prev - 1;
     });
@@ -84,33 +113,29 @@ const TestimonialSlider = () => {
     setIsPlaying(!isPlaying);
   };
 
-  // Helper function to determine slidesPerView based on window width
-  function getSlidesPerView() {
-    const width = window.innerWidth;
-    if (width >= 1024) return 3; // 3 slides for large screens
-    if (width >= 768) return 2; // 2 slides for medium screens
-    return 1; // 1 slide for small screens
-  }
+  // Calculate the actual slide to display (for the infinite loop effect)
+  const getDisplaySlideIndex = (index) => {
+    return index % testimonials.length;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-4 lg:py-8 px-4">
       <div className="w-full max-w-7xl mx-auto py-2">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Clients Feedbacks</h2>
-         
         </div>
 
-        <div className="relative overflow-hidden rounded-x pt-10">
+        <div className="relative overflow-hidden rounded-xl pt-10">
           {/* Slider container */}
           <div
             className="flex transition-transform duration-500 ease-in-out w-full"
-            style={{ transform: `translateX(-${currentSlide * (100 / getSlidesPerView())}%)` }}
+            style={{ transform: `translateX(-${currentSlide * (100 / slidesPerView)}%)` }}
           >
-            {testimonials.map((testimonial) => (
+            {duplicatedTestimonials.map((testimonial, index) => (
               <div
-                key={testimonial.id}
+                key={`${testimonial.id}-${index}`}
                 className="flex-shrink-0 px-2 sm:px-3 md:px-4"
-                style={{ width: `${100 / getSlidesPerView()}%` }}
+                style={{ width: `${100 / slidesPerView}%` }}
               >
                 <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 flex flex-col h-full relative">
                   <div className="flex items-center mb-6">
@@ -132,7 +157,7 @@ const TestimonialSlider = () => {
                   <div className="bg-gray-100 p-4 rounded-lg border border-gray-200 flex-grow">
                     <p className="text-gray-600 flex-grow mb-0">{testimonial.content}</p>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-4">
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <span key={i} className="text-yellow-400">
@@ -140,12 +165,10 @@ const TestimonialSlider = () => {
                         </span>
                       ))}
                     </div>
-
                   </div>
                   <div className="ps-testm-quote">
                     <img src="images/quote.png" alt="Quote" />
                   </div>
-
                 </div>
               </div>
             ))}
@@ -188,20 +211,12 @@ const TestimonialSlider = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-blue-500' : 'bg-gray-300'}`}
+                className={`w-3 h-3 rounded-full ${currentSlide % testimonials.length === index ? 'bg-blue-500' : 'bg-gray-300'}`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
-
-        {/* Responsive indicators */}
-        {/* <div className="mt-12 text-center text-gray-600">
-          <p className="text-sm">Swipe to navigate on mobile devices</p>
-          <div className="flex justify-center mt-2">
-            <i className="fas fa-arrows-left-right text-blue-500"></i>
-          </div>
-        </div> */}
       </div>
     </div>
   );

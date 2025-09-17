@@ -253,155 +253,68 @@ html {
 /* Navbar section */
 
   /* Navbar section */
-
   .nav {
-      width: 100%;
-      height: 78px;
-      position: fixed;
-      line-height: 65px;
-      text-align: center;
-      z-index: 1234;
+    width: 100%;
+    height: 78px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 1234;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
 
   .nav div.logo {
-      float: left;
-      max-width: 115px;
-      height: auto;
-      /* padding-left: 3rem; */
+    float: left;
+    max-width: 115px;
+    height: auto;
   }
 
   .nav div.logo a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 2.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
   }
 
-
-
   .nav div.main_list {
-      height: 65px;
-      float: right;
-      margin-top: 8px;
+    height: 65px;
+    float: right;
+    margin-top: 8px;
   }
 
   .nav div.main_list ul {
-      width: 100%;
-      height: 65px;
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 35px;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
   }
 
   .nav div.main_list ul li {
-      width: auto;
-      height: 65px;
-      padding: 0;
-      /* padding-right: 3rem; */
+    width: auto;
+    height: 65px;
+    padding: 0;
   }
 
   .nav div.main_list ul li a {
-      text-decoration: none;
-      color: #000;
-      line-height: 65px;
-      font-size: 22px;
+    text-decoration: none;
+    color: #000;
+    line-height: 65px;
+    font-size: 22px;
   }
-
-
-
-
-
-  /* Home section */
-
-
 
   .navTrigger {
-      display: none;
+    display: none;
   }
 
-  .nav {
-      padding-top: 12px;
-      padding-bottom: 20px;
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease;
-  }
-
-
-  /* Media qurey section */
-
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-      /* .container {
-          margin: 0;
-      } */
-  }
-
-  @media screen and (max-width:1199px) {
-      /* .nav .container {
-          max-width: 100%;
-          padding: 0;
-      } */
-
-      .navTrigger {
-          display: block;
-      }
-
-      .nav div.logo {
-          margin-left: 3%;
-      }
-
-      .nav div.main_list {
-          width: 100%;
-          height: 0;
-          overflow: hidden;
-      }
-
-      .nav div.show_list {
-          height: auto;
-          display: none;
-          position: relative;
-          top: -83px;
-      }
-
-      .nav div.main_list ul {
-          flex-direction: column;
-          width: 100%;
-          height: 100vh;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          background-color: #fff;
-          /*same background color of navbar*/
-          background-position: center top;
-      }
-
-      .nav div.main_list ul li {
-          width: 100%;
-          text-align: center;
-      }
-
-      .nav div.main_list ul li a {
-          text-align: center;
-          width: 100%;
-          font-size: 20px;
-          padding: 20px;
-      }
-
-      .nav div.main_list ul {
-          gap: 20px;
-          padding-top: 50px;
-      }
-
-      .nav div.media_button {
-          display: block;
-      }
-  }
-
-
-  /* Animation */
-  /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
-
-  .navTrigger {
+  /* Media query section */
+  @media screen and (max-width: 1199px) {
+    .navTrigger {
+      display: block;
       cursor: pointer;
       width: 30px;
       height: 25px;
@@ -410,234 +323,241 @@ html {
       right: 30px;
       top: 0;
       bottom: 0;
+      z-index: 9999;
+    }
+
+    .nav div.logo {
+      margin-left: 3%;
+    }
+
+    .nav div.main_list {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      background-color: #fff;
+    }
+
+    .nav div.main_list.show_list {
+      height: 100vh;
+      display: block;
+    }
+
+    .nav div.main_list ul {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      padding: 20px 0;
+    }
+
+    .nav div.main_list ul li {
+      width: 100%;
+      text-align: center;
+      height: auto;
+    }
+
+    .nav div.main_list ul li a {
+      text-align: center;
+      width: 100%;
+      font-size: 24px;
+      padding: 12px;
+      display: block;
+    }
+
+    .nav div.main_list ul {
+      gap: 0;
+    }
   }
 
+  /* Animation */
   .navTrigger i {
-      background-color: #000;
-      border-radius: 2px;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
   }
 
   .navTrigger i:nth-child(1) {
-      -webkit-animation: outT 0.8s backwards;
-      animation: outT 0.8s backwards;
-      -webkit-animation-direction: reverse;
-      animation-direction: reverse;
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
   }
 
   .navTrigger i:nth-child(2) {
-      margin: 5px 0;
-      -webkit-animation: outM 0.8s backwards;
-      animation: outM 0.8s backwards;
-      -webkit-animation-direction: reverse;
-      animation-direction: reverse;
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
   }
 
   .navTrigger i:nth-child(3) {
-      -webkit-animation: outBtm 0.8s backwards;
-      animation: outBtm 0.8s backwards;
-      -webkit-animation-direction: reverse;
-      animation-direction: reverse;
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
   }
 
   .navTrigger.active i:nth-child(1) {
-      -webkit-animation: inT 0.8s forwards;
-      animation: inT 0.8s forwards;
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
   }
 
   .navTrigger.active i:nth-child(2) {
-      -webkit-animation: inM 0.8s forwards;
-      animation: inM 0.8s forwards;
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
   }
 
   .navTrigger.active i:nth-child(3) {
-      -webkit-animation: inBtm 0.8s forwards;
-      animation: inBtm 0.8s forwards;
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
   }
 
   @-webkit-keyframes inM {
-      50% {
-          -webkit-transform: rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: rotate(45deg);
-      }
+    50% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(45deg);
+    }
   }
 
   @keyframes inM {
-      50% {
-          transform: rotate(0deg);
-      }
-
-      100% {
-          transform: rotate(45deg);
-      }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
   }
 
   @-webkit-keyframes outM {
-      50% {
-          -webkit-transform: rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: rotate(45deg);
-      }
+    50% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(45deg);
+    }
   }
 
   @keyframes outM {
-      50% {
-          transform: rotate(0deg);
-      }
-
-      100% {
-          transform: rotate(45deg);
-      }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
   }
 
   @-webkit-keyframes inT {
-      0% {
-          -webkit-transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          -webkit-transform: translateY(9px) rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: translateY(9px) rotate(135deg);
-      }
+    0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+    }
   }
 
   @keyframes inT {
-      0% {
-          transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          transform: translateY(9px) rotate(0deg);
-      }
-
-      100% {
-          transform: translateY(9px) rotate(135deg);
-      }
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(9px) rotate(135deg);
+    }
   }
 
   @-webkit-keyframes outT {
-      0% {
-          -webkit-transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          -webkit-transform: translateY(9px) rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: translateY(9px) rotate(135deg);
-      }
+    0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+    }
   }
 
   @keyframes outT {
-      0% {
-          transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          transform: translateY(9px) rotate(0deg);
-      }
-
-      100% {
-          transform: translateY(9px) rotate(135deg);
-      }
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(9px) rotate(135deg);
+    }
   }
 
   @-webkit-keyframes inBtm {
-      0% {
-          -webkit-transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          -webkit-transform: translateY(-9px) rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: translateY(-9px) rotate(135deg);
-      }
+    0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+    }
   }
 
   @keyframes inBtm {
-      0% {
-          transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          transform: translateY(-9px) rotate(0deg);
-      }
-
-      100% {
-          transform: translateY(-9px) rotate(135deg);
-      }
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-9px) rotate(135deg);
+    }
   }
 
   @-webkit-keyframes outBtm {
-      0% {
-          -webkit-transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          -webkit-transform: translateY(-9px) rotate(0deg);
-      }
-
-      100% {
-          -webkit-transform: translateY(-9px) rotate(135deg);
-      }
+    0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+    }
   }
 
   @keyframes outBtm {
-      0% {
-          transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-          transform: translateY(-9px) rotate(0deg);
-      }
-
-      100% {
-          transform: translateY(-9px) rotate(135deg);
-      }
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-9px) rotate(135deg);
+    }
   }
 
   .affix {
-      padding: 0;
-      background-color: #fff;
-      z-index: 1234;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-
-
-
-
-
-  .myH2 {
-      text-align: center;
-      font-size: 4rem;
-  }
-
-  .myP {
-      text-align: justify;
-      padding-left: 15%;
-      padding-right: 15%;
-      font-size: 20px;
+    padding: 0;
+    background-color: #fff;
+    z-index: 1234;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 .background-hero{
   background-image: url(/images/banner-slider.png);
 }
-  @media all and (max-width:700px) {
-      .myP {
-          padding: 2%;
-      }
-  }

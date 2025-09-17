@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +27,7 @@ const Navigation = () => {
 
   return (
     <nav className={`nav ${isScrolled ? 'affix' : ''}`}>
-      <div className="container md-px-10 mx-auto">
+      <div className="container md:px-10 mx-auto">
         <div className="logo">
           <a href="#">
             <img src="images/medical-equipment-logo.png" alt="Medical Equipment" />
