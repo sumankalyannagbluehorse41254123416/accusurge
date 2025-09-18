@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function Products() {
   const productList = [
-    { id: 1, img: "/images/product-1.png", title: "Medicine" },
-    { id: 2, img: "/images/product-2.png", title: "Medicine" },
-    { id: 3, img: "/images/product-3.png", title: "Medicine" },
-    { id: 4, img: "/images/product-4.png", title: "Medicine" },
-    { id: 5, img: "/images/product-5.png", title: "Medicine" },
-    { id: 6, img: "/images/product-6.png", title: "Medicine" },
-    { id: 7, img: "/images/product-7.png", title: "Medicine" },
-    { id: 8, img: "/images/product-8.png", title: "Medicine" },
+    { id: 1, img: "/images/Anesthesia Workstations.png", title: "Anesthesia Workstations" },
+    { id: 2, img: "/images/Bedside Lockers.png", title: "Bedside Lockerse" },
+    { id: 3, img: "/images/Cardiovascular Instruments.png", title: "Cardiovascular Instruments" },
+    { id: 4, img: "/images/Catheters.png", title: "Catheters" },
+    { id: 5, img: "/images/Crash Carts.png", title: "Crash Carts" },
+    { id: 6, img: "/images/Defibrillators.png", title: "Defibrillators" },
+    { id: 7, img: "/images/Diathermy_Machine_upscaled.png", title: "Diathermy Machine" },
+    { id: 8, img: "/images/Electrosurgical unit.png", title: "Electrosurgical" },
   ];
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section className="bg-[#eef5f6]">
+    <section className="bg-white">
       <div className="md:px-20 py-10 mx-4">
         <div className="container mx-auto">
           {/* Heading */}
@@ -71,7 +71,7 @@ export default function Products() {
           </div>
 
           {/* Product Grid */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {productList.map((product) => (
               <div key={product.id} className="mt-12 product-group cursor-pointer">
                 <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
@@ -86,9 +86,9 @@ export default function Products() {
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             <div className="mt-12 cursor-pointer">
               <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
                 <img src="product1.jpg" alt="Product 1" className="max-h-[200px]" />
@@ -153,7 +153,7 @@ export default function Products() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

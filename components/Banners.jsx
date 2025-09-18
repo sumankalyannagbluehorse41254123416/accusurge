@@ -62,6 +62,7 @@ export default function Banners() {
   }, []);
 
   return (
+    <section className="bg-white">
     <div className="container md:px-10 py-20 mx-auto">
       <div className="flex flex-wrap mx-4">
         <div className="w-full lg:w-4/12 md:w-6/12 px-3 mb-8">
@@ -93,5 +94,7 @@ export default function Banners() {
         </div>
       </div>
     </div>
+
+    </section>
   );
 }

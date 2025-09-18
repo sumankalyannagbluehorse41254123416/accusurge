@@ -45,7 +45,7 @@ export default function Team() {
   };
 
   return (
-    <div className="py-20 md:px-20">
+    <div className="py-20 md:px-20 bg-gradient-to-br from-white to-purple-200">
       <div className="lg:max-w-5xl mx-auto px-4">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold">Meet Our Team</h1>

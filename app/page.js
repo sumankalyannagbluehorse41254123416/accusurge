@@ -12,6 +12,7 @@ import Team from '@/components/Team';
 import About from '@/components/About';
 import Address from '@/components/Address';
 import Footer from '@/components/Footer';
+import Mission from '@/components/Mission';
 
 export default function Home() {
   return (
@@ -22,11 +23,12 @@ export default function Home() {
       <Banners />
       <Categories />
       <Products />
-      <Brands />
-      <Testimonials />
       <Team />
+      {/* <Brands /> */}
+      <Testimonials />
+      <Mission />
       <About />
-      <Address/>
+      <Address />
       <Footer />
     </div>
   );

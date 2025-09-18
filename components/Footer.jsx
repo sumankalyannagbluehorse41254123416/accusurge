@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <footer className="bg-gray-900 pt-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-20">
         {/* Footer Content */}
         <div className="flex flex-wrap -mx-4">
           {/* Logo & Description */}
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           {/* Categories */}
-          <div className="w-full lg:w-1/6 md:w-1/2 px-4 pb-8">
+          <div className="w-full lg:w-1/4 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Categories</h2>
               <ul>
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           {/* Useful Links */}
-          <div className="w-full lg:w-1/6 md:w-1/2 px-4 pb-8">
+          <div className="w-full lg:w-1/5 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Useful links</h2>
               <ul>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 pb-8">
+          <div className="w-full lg:w-1/6 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Contact</h2>
               <div className="text-gray-300 mb-2">

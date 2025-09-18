@@ -2,15 +2,9 @@
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 
 // Fix for default markers in react-leaflet
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
+
 
 export default function Address() {
     // Default coordinates (set to New York City)
@@ -18,7 +12,7 @@ export default function Address() {
 
     return (
         <div>
-            <section className="bg-white py-10 md:px-20 mx-4">
+            <section className="bg-gradient-to-br from-white to-purple-200 py-10 md:px-20 mx-4">
                 <div className="container mx-auto">
                     <div className="text-center mb-10">
                         <h1 className="text-3xl font-bold">Contact Us</h1>
@@ -28,7 +22,7 @@ export default function Address() {
                         </p>
                     </div>
                     <div className="flex flex-col-reverse lg:flex-row gap-8">
-                        <div className="map h-96 md:h-full rounded-lg overflow-hidden shadow-lg ">
+                        <div className="address-left map h-96 md:h-full rounded-lg overflow-hidden shadow-lg ">
                             {/* <MapContainer
                                 center={position}
                                 zoom={13}
@@ -61,7 +55,7 @@ export default function Address() {
                             />
                         </div>
 
-                        <div className="w-full lg:w-[48%] address-info flex flex-col justify-start p-4 lg:p-6 bg-gray-50 rounded-lg shadow-md gap-8">
+                        <div className="address_right w-full lg:w-[48%] address-info flex flex-col justify-start p-4 lg:p-6 bg-gray-50 rounded-lg shadow-md gap-8">
                             <div>
                                 <h3 className="text-2xl font-semibold mb-4 text-black">Registered Office</h3>
                                 <div className="space-y-3">

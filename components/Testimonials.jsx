@@ -12,28 +12,28 @@ const TestimonialSlider = () => {
       id: 1,
       name: "Dr. Ananya Sharma",
       role: "Senior Surgeon, Apollo Hospitals",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "images/testimonial_photo1.jpg",
       content: "Accusurge delivers exactly what we need, on time and with consistent quality. Their surgical instruments have been a game changer for our hospital. The durability and precision of their tools have enhanced surgical outcomes and reduced complications."
     },
     {
       id: 2,
       name: "Rajesh Mehta",
       role: "Procurement Head, Fortis Healthcare",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "images/testimonial_photo2.jpg",
       content: "Reliable equipment, fast delivery, and transparent pricing. Accusurge is now our trusted partner for medical supplies. They maintain professionalism at every step, from consultation to after-sales support, making procurement stress-free for us."
     },
     {
       id: 3,
       name: "Dr. Priya Nair",
       role: "Consultant, Medanta Hospital",
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "images/testimonal photo.jpg",
       content: "The precision of their instruments has improved the confidence of my surgical team. Truly world-class. I appreciate their strict adherence to safety standards and their dedication to constant product innovation."
     },
     {
       id: 4,
       name: "Amitabh Gupta",
       role: "Hospital Administrator, Max Healthcare",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      image: "images/testimonial_photo4.jpg",
       content: "We recently set up a new ICU, and Accusurge handled everything — from monitors to infusion pumps. Highly professional service. They guided us in selecting the right models and ensured everything was installed smoothly without delays."
     }
   ];
@@ -119,7 +119,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-4 lg:py-8 px-4">
+    <div className="min-h-screen bg-white flex items-center justify-center py-4 lg:py-8 px-4">
       <div className="w-full max-w-7xl mx-auto py-2">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Hear From Our Clients</h2>

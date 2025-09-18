@@ -87,7 +87,7 @@ export default function Categories() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="category-section py-10 pb-11 md:px-20">
+    <div ref={sectionRef} className="category-section py-10 pb-11 md:px-20 bg-gradient-to-br from-white to-purple-200">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center mx-4">
           <div
