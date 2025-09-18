@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-7/12 md:w-full">
               <div className={`ps-banner-content ${scrollDirection === 'down' ? 'slide-down' : 'slide-up'}`}>
-                <h1 className="text-4xl md:text-5xl font-medium text-white my-10 leading-tight">
+                <h1 className="text-4xl md:text-5xl font-semibold text-white my-10 leading-tight">
                   Trusted Surgical Instruments<br /> Supplier in India
                 </h1>
                 <p className="text-white text-lg max-w-xl">

@@ -62,7 +62,7 @@ export default function Categories() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     // Initial check in case the section is already in view on page load
     const initialCheck = () => {
       if (sectionRef.current) {
@@ -90,12 +90,12 @@ export default function Categories() {
     <div ref={sectionRef} className="category-section py-10 pb-11 md:px-20">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center mx-4">
-          <div 
-            className="left-category-content lg:w-5/12 w-full mb-8 lg:mb-0" 
-            style={{ 
-              transform: isVisible ? 'translateX(0)' : 'translateX(-100px)', 
-              opacity: isVisible ? 1 : 0, 
-              transition: 'transform 0.8s ease, opacity 0.8s ease' 
+          <div
+            className="left-category-content lg:w-5/12 w-full mb-8 lg:mb-0"
+            style={{
+              transform: isVisible ? 'translateX(0)' : 'translateX(-100px)',
+              opacity: isVisible ? 1 : 0,
+              transition: 'transform 0.8s ease, opacity 0.8s ease'
             }}
           >
             <div>
@@ -105,7 +105,7 @@ export default function Categories() {
               </p>
             </div>
           </div>
-          <div 
+          {/* <div 
             className="right-category-content lg:w-7/12 w-full" 
             style={{ 
               transform: isVisible ? 'translateX(0)' : 'translateX(100px)', 
@@ -128,7 +128,33 @@ export default function Categories() {
                 </div>
               ))}
             </div>
+          </div> */}
+
+          <div className="right-category-content lg:w-7/12 w-full" style={{
+            transform: isVisible ? 'translateX(0)' : 'translateX(100px)',
+            opacity: isVisible ? 1 : 0,
+            transition: 'transform 0.8s ease, opacity 0.8s ease'
+          }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="flex items-center bg-white rounded-lg shadow-lg p-9 hover:-translate-y-2 transition-transform duration-500">
+                <img src="images/medicine.png" alt="Category 1" className="w-12 h-12" />
+                <h3 className="text-lg font-bold text-gray-900 pl-5">Medical Equipment</h3>
+              </div>
+              <div className="flex items-center bg-white rounded-lg shadow-lg p-9 hover:-translate-y-2 transition-transform duration-500">
+                <img src="images/ayurveda.png" alt="Category 2" className="w-12 h-12" />
+                <h3 className="text-lg font-bold text-gray-900 pl-5">Surgical Instruments</h3>
+              </div>
+              <div className="flex items-center bg-white rounded-lg shadow-lg p-9 hover:-translate-y-2 transition-transform duration-500">
+                <img src="images/homeopathy.png" alt="Category 3" className="w-12 h-12" />
+                <h3 className="text-lg font-bold text-gray-900 pl-5">Hospital Furniture</h3>
+              </div>
+              <div className="flex items-center bg-white rounded-lg shadow-lg p-9 hover:-translate-y-2 transition-transform duration-500">
+                <img src="images/mask.png" alt="Category 4" className="w-12 h-12" />
+                <h3 className="text-lg font-bold text-gray-900 pl-5">Consumables & Disposables</h3>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
