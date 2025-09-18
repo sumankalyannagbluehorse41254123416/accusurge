@@ -10,31 +10,31 @@ const TestimonialSlider = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Elizabeth Andrew",
-      role: "UI Designer",
+      name: "Dr. Ananya Sharma",
+      role: "Senior Surgeon, Apollo Hospitals",
       image: "https://randomuser.me/api/portraits/women/44.jpg",
-      content: "Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et doloe magna aliqua. Ut enim ad minim veniamuis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatis aute irure dolr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      content: "Accusurge delivers exactly what we need, on time and with consistent quality. Their surgical instruments have been a game changer for our hospital. The durability and precision of their tools have enhanced surgical outcomes and reduced complications."
     },
     {
       id: 2,
-      name: "Leonard Simon",
-      role: "UI Designer",
+      name: "Rajesh Mehta",
+      role: "Procurement Head, Fortis Healthcare",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
-      content: "Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et doloe magna aliqua. Ut enim ad minim veniamuis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatis aute irure dolr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      content: "Reliable equipment, fast delivery, and transparent pricing. Accusurge is now our trusted partner for medical supplies. They maintain professionalism at every step, from consultation to after-sales support, making procurement stress-free for us."
     },
     {
       id: 3,
-      name: "Maria Tracey",
-      role: "UI Designer",
+      name: "Dr. Priya Nair",
+      role: "Consultant, Medanta Hospital",
       image: "https://randomuser.me/api/portraits/women/68.jpg",
-      content: "Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et doloe magna aliqua. Ut enim ad minim veniamuis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatis aute irure dolr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      content: "The precision of their instruments has improved the confidence of my surgical team. Truly world-class. I appreciate their strict adherence to safety standards and their dedication to constant product innovation."
     },
     {
       id: 4,
-      name: "John Peterson",
-      role: "UX Designer",
+      name: "Amitabh Gupta",
+      role: "Hospital Administrator, Max Healthcare",
       image: "https://randomuser.me/api/portraits/men/75.jpg",
-      content: "Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore et doloe magna aliqua. Ut enim ad minim veniamuis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatis aute irure dolr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      content: "We recently set up a new ICU, and Accusurge handled everything — from monitors to infusion pumps. Highly professional service. They guided us in selecting the right models and ensured everything was installed smoothly without delays."
     }
   ];
 
