@@ -15,10 +15,9 @@ export default function Footer() {
                 className="w-auto max-h-[7rem] mb-6"
               />
               <p className="text-gray-300 mb-6">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris.
+                "From surgical instruments to healthcare products, Accusurge supports doctors and nurses with reliable tools for safer care and faster recovery."
               </p>
-               <ul className="flex gap-2 mt-6">
+              {/* <ul className="flex gap-2 mt-6">
                 {["facebook", "twitter", "instagram"].map((icon, idx) => (
                   <li key={idx}>
                     <a
@@ -32,12 +31,12 @@ export default function Footer() {
                     </a>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
 
           {/* Categories */}
-          <div className="w-full lg:w-1/4 md:w-1/2 px-4 pb-8">
+          {/* <div className="w-full lg:w-1/4 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Categories</h2>
               <ul>
@@ -56,10 +55,38 @@ export default function Footer() {
                 )}
               </ul>
             </div>
+          </div> */}
+          <div className="w-full lg:w-1/4 md:w-1/2 px-4 pb-8">
+            <div>
+              <h2 className="text-white text-xl mb-4">Categories</h2>
+              <ul>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Medical Equipment</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Surgical Instruments</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Hospital Furniture</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">New Hospital Projects</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Disposable</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
+
           {/* Useful Links */}
-          <div className="w-full lg:w-1/5 md:w-1/2 px-4 pb-8">
+          {/* <div className="w-full lg:w-1/5 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Useful links</h2>
               <ul>
@@ -78,7 +105,35 @@ export default function Footer() {
                 )}
               </ul>
             </div>
+          </div> */}
+          <div className="w-full lg:w-1/5 md:w-1/2 px-4 pb-8">
+            <div>
+              <h2 className="text-white text-xl mb-4">Useful links</h2>
+              <ul>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">About</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Products</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Team</a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Testimonial </a>
+                </li>
+                <li className="mb-2 relative pl-4">
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t-2 border-r-2 border-blue-500 transform rotate-45" />
+                  <a href="#" className="text-gray-300 hover:text-blue-500 transition-colors">Mission</a>
+                </li>
+              </ul>
+            </div>
           </div>
+
 
           {/* Contact Info */}
           <div className="w-full lg:w-1/6 md:w-1/2 px-4 pb-8">
@@ -95,8 +150,8 @@ export default function Footer() {
                 <a href="#" className="block">sagarc@accusurge.co.in</a>
                 <a href="#" className="block">achintyakar@accusurge.co.in</a>
               </div>
-            
-             
+
+
             </div>
           </div>
         </div>
@@ -106,7 +161,7 @@ export default function Footer() {
       <div className="bg-blue-500 py-3 mt-8">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-white text-center capitalize">
-            © 2023 Medical. All rights reserved.
+            © 2025 <a href="#">Accusurge</a>, All Rights Reserved | Powered By <a href="https://www.bluehorse.in/">BlueHorse Software</a>
           </p>
         </div>
       </div>

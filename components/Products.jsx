@@ -1,4 +1,3 @@
-// components/Products.js
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
@@ -6,7 +5,7 @@ import Image from "next/image";
 export default function Products() {
   const productList = [
     { id: 1, img: "/images/Anesthesia Workstations.png", title: "Anesthesia Workstations" },
-    { id: 2, img: "/images/Bedside Lockers.png", title: "Bedside Lockerse" },
+    { id: 2, img: "/images/Bedside Lockers.png", title: "Bedside Lockers" },
     { id: 3, img: "/images/Cardiovascular Instruments.png", title: "Cardiovascular Instruments" },
     { id: 4, img: "/images/Catheters.png", title: "Catheters" },
     { id: 5, img: "/images/Crash Carts.png", title: "Crash Carts" },
@@ -41,7 +40,7 @@ export default function Products() {
     // Add initial styles to products for animation
     const products = document.querySelectorAll('.product-group');
     products.forEach(product => {
-      product.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+      // product.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
       product.style.transform = 'translateY(50px)';
       product.style.opacity = '0';
     });
@@ -73,7 +72,7 @@ export default function Products() {
           {/* Product Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {productList.map((product) => (
-              <div key={product.id} className="mt-12 product-group cursor-pointer">
+              <div key={product.id} className="mt-12 product-group cursor-pointer hover:-translate-y-2 transition-all duration-300">
                 <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
                   <img 
                     src={product.img} 
@@ -87,74 +86,6 @@ export default function Products() {
               </div>
             ))}
           </div>
-
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product1.jpg" alt="Product 1" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 1</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product2.jpg" alt="Product 2" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 2</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product3.jpg" alt="Product 3" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 3</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 4</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 4</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 4</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 4</p>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 cursor-pointer">
-              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
-                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
-                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
-                  <p className="font-bold">Product Title 4</p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
         </div>
       </div>
     </section>

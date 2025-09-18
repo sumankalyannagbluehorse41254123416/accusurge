@@ -268,7 +268,7 @@ html {
 
   .nav div.logo {
     float: left;
-    max-width: 115px;
+    max-width: 125px;
     height: auto;
   }
 
@@ -304,7 +304,7 @@ html {
     text-decoration: none;
     color: #000;
     line-height: 65px;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .navTrigger {

@@ -125,7 +125,7 @@ const TestimonialSlider = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Hear From Our Clients</h2>
         </div>
 
-        <div className="relative overflow-hidden rounded-xl pt-10">
+        <div className="relative overflow-hidden rounded-xl pt-10 pb-8">
           {/* Slider container */}
           <div
             className="flex transition-transform duration-500 ease-in-out w-full"

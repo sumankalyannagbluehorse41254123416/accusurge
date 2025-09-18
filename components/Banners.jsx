@@ -69,7 +69,7 @@ export default function Banners() {
           <div className="text-center">
             <a href="#" className="no-underline">
               <div ref={el => bannerRefs.current[0] = el}>
-                <img src="images/accusurge_banner1.png" alt="Ad 1" className="w-full rounded-lg" />
+                <img src="images/banner_edit.png" alt="Ad 1" className="w-full rounded-lg" />
               </div>
             </a>
           </div>
@@ -78,7 +78,7 @@ export default function Banners() {
           <div className="text-center">
             <a href="#" className="no-underline">
               <div ref={el => bannerRefs.current[1] = el}>
-                <img src="images/accusurge_banner2.png" alt="Ad 2" className="w-full rounded-lg" />
+                <img src="images/banner_edit2.png" alt="Ad 2" className="w-full rounded-lg" />
               </div>
             </a>
           </div>
@@ -87,7 +87,7 @@ export default function Banners() {
           <div className="text-center">
             <a href="#" className="no-underline">
               <div ref={el => bannerRefs.current[2] = el}>
-                <img src="images/accusurge_banner.png" alt="Ad 3" className="w-full rounded-lg"  />
+                <img src="images/banner_edit3.png" alt="Ad 3" className="w-full rounded-lg"  />
               </div>
             </a>
           </div>
