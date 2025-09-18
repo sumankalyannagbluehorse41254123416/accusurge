@@ -48,10 +48,9 @@ export default function Team() {
     <div className="py-20 md:px-20">
       <div className="lg:max-w-5xl mx-auto px-4">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold">The People Behind Us</h1>
+          <h1 className="text-3xl font-bold">Meet Our Team</h1>
           <p className="text-gray-600 mt-2">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Meet the professionals dedicated to sourcing, curating, and delivering the highest quality surgical instruments and healthcare products.
           </p>
         </div>
         <div className="team-grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">

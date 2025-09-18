@@ -10,6 +10,7 @@ import Brands from '@/components/Brands';
 import Testimonials from '@/components/Testimonials';
 import Team from '@/components/Team';
 import About from '@/components/About';
+import Address from '@/components/Address';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Services />
+      {/* <Services /> */}
       <Banners />
       <Categories />
       <Products />
@@ -25,6 +26,7 @@ export default function Home() {
       <Testimonials />
       <Team />
       <About />
+      <Address/>
       <Footer />
     </div>
   );

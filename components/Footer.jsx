@@ -18,6 +18,21 @@ export default function Footer() {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco laboris.
               </p>
+               <ul className="flex gap-2 mt-6">
+                {["facebook", "twitter", "instagram"].map((icon, idx) => (
+                  <li key={idx}>
+                    <a
+                      href="#"
+                      className="w-8 h-8 bg-blue-500 flex items-center justify-center rounded hover:-translate-y-1 transition-transform"
+                    >
+                      <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z">
+                        </path>
+                      </svg>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -69,30 +84,19 @@ export default function Footer() {
           <div className="w-full lg:w-1/3 md:w-1/2 px-4 pb-8">
             <div>
               <h2 className="text-white text-xl mb-4">Contact</h2>
-              <p className="text-gray-300 mb-2">
-                <span className="text-blue-500">Contact : </span>+55 456-789-9651
-              </p>
-              <p className="text-gray-300 mb-2">
-                <span className="text-blue-500">Email : </span>example@medical.com
-              </p>
-              <p className="text-gray-300 mb-6">
-                <span className="text-blue-500">Address : </span>785 LNCT block street, USA
-              </p>
-              <ul className="flex gap-2 mt-6">
-                {["facebook", "twitter", "instagram"].map((icon, idx) => (
-                  <li key={idx}>
-                    <a
-                      href="#"
-                      className="w-8 h-8 bg-blue-500 flex items-center justify-center rounded hover:-translate-y-1 transition-transform"
-                    >
-                      <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z">
-                        </path>
-                      </svg>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div className="text-gray-300 mb-2">
+                <p className="text-blue-500">Contact : </p>
+                <p>+91 80011 01111</p>
+                <p>+91 97491 40606</p>
+                <p>+91 90073 37749</p>
+              </div>
+              <div className="text-gray-300 mb-2">
+                <p className="text-blue-500">Email : </p>
+                <a href="#" className="block">sagarc@accusurge.co.in</a>
+                <a href="#" className="block">achintyakar@accusurge.co.in</a>
+              </div>
+            
+             
             </div>
           </div>
         </div>

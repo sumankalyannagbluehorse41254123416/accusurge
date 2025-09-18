@@ -122,7 +122,7 @@ const TestimonialSlider = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-4 lg:py-8 px-4">
       <div className="w-full max-w-7xl mx-auto py-2">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Our Clients Feedbacks</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Hear From Our Clients</h2>
         </div>
 
         <div className="relative overflow-hidden rounded-xl pt-10">

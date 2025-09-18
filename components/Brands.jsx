@@ -100,7 +100,7 @@ export default function Brands() {
         <div className="flex flex-col ">
           <div className="col-span-full">
             <div className="flex justify-between items-center border-b-4 border-double border-gray-200 pb-6">
-              <h4 className="text-2xl font-bold text-gray-800">Shop by Brand</h4>
+              <p className="text-2xl font-bold text-gray-800">Explore by Brand</p>
               <a href="#" className="text-base underline text-blue-600 font-bold no-underline">View All</a>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Brands() {
               >
                 <img 
                   src={`images/brand-${index + 1}.png`} 
-                  className="transition-transform duration-300 hover:-translate-x-1 shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_3px_10px_0_rgba(0,0,0,0.08)]" 
+                  className="w-full transition-transform duration-300 hover:-translate-x-1 shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_3px_10px_0_rgba(0,0,0,0.08)]" 
                   alt={`Brand ${index + 1}`}
                 />
               </a>

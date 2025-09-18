@@ -99,10 +99,9 @@ export default function Categories() {
             }}
           >
             <div>
-              <h4 className="text-3xl font-bold text-gray-900">Shop by categories</h4>
+              <h2 className="text-3xl font-bold text-gray-900 max-w-sm">Explore Our Medical Equipment Categories</h2>
               <p className="text-base text-gray-500 font-normal max-w-xs mt-6 leading-6">
-                consectetur adipisicing elit, sed do eius tempor incididunt ut labore et dolore magna aliqua
-                enim ad minim veniam nostrud exercit.
+                Accusurge offers a comprehensive selection of medical equipment, surgical instruments, hospital furniture, and consumables. Whether you need advanced operating tables, anesthesia workstations, surgical kits, or disposables, our curated categories provide trusted solutions for surgical centers and healthcare facilities.
               </p>
             </div>
           </div>
@@ -125,7 +124,7 @@ export default function Categories() {
                     alt={category.alt} 
                     className="w-12 h-12" 
                   />
-                  <p className="text-lg font-bold text-gray-900 pl-5">{category.title}</p>
+                  <h3 className="text-lg font-bold text-gray-900 pl-5">{category.title}</h3>
                 </div>
               ))}
             </div>

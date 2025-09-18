@@ -65,13 +65,13 @@ export default function Products() {
           {/* Heading */}
           <div className="col-span-full">
             <div className="flex justify-between items-center border-b-4 border-double border-gray-200 pb-6">
-              <h4 className="text-2xl font-bold text-gray-800">Products</h4>
+              <p className="text-2xl font-bold text-gray-800">Our Medical Instruments</p>
               <a href="#" className="text-base underline text-blue-600 font-bold no-underline">View All</a>
             </div>
           </div>
-          
+
           {/* Product Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {productList.map((product) => (
               <div key={product.id} className="mt-12 product-group cursor-pointer">
                 <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
@@ -86,7 +86,75 @@ export default function Products() {
                 </div>
               </div>
             ))}
+          </div> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product1.jpg" alt="Product 1" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 1</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product2.jpg" alt="Product 2" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 2</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product3.jpg" alt="Product 3" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 3</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 4</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 4</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 4</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 4</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 cursor-pointer">
+              <div className="bg-white w-full text-center rounded-md min-h-[260px] flex justify-center items-center relative">
+                <img src="product4.jpg" alt="Product 4" className="max-h-[200px]" />
+                <div className="absolute -bottom-10 left-0 right-0 transition-all duration-300 bg-[#ff9700] py-2.5">
+                  <p className="font-bold">Product Title 4</p>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
